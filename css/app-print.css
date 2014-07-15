@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+* { font-family: 'Open Sans', sans-serif; }
+
+.engaged_contacts * { line-height: 16px; font-size: 16px; }
+
+.signup, .controls, .templates { display: none; }
+
+.contact { white-space: nowrap; position: relative; display: table-header-group; }
+.contact .header, .contact .activity { display: table-cell; vertical-align: top; position: relative; }
+.contact .champs_score, .contact .email, .contact .activity div, .contact .extra { display: table-cell; vertical-align: top; padding: 10px; }
+.contact .email { min-width: 250px; }
+.contact .groups, .contact .contactID { display: none; }
+.contact .activity { padding-right: 5px; }
+.contact .activity > div { width: 18%; display: inline-block; text-align: center; }
+.contact .activity .clicks { width: 15%; }
+.contact .activity .forwards { width: 24%; }
+
+.contact:first-of-type label { display: block; border-bottom: solid 2px black; margin-bottom: 10px; }
+.contact:first-of-type .activity .value { display: block; position: relative; top: 30px; }
+.contact:first-of-type .activity label { position: relative; top: -16px; }
+
+.contact:nth-of-type(n+2) label { display: none; }
+
+/*# sourceMappingURL=app-print.css.map */

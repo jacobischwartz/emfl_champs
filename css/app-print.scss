@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+.engaged_contacts * {
+  line-height: 16px;
+  font-size: 16px;
+}
+.signup,
+.controls,
+.templates {
+  display: none;
+}
+
+.contact {
+  white-space: nowrap;
+  position: relative;
+  display: table-header-group;
+  // field grouping containers
+  .header,
+  .activity {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+  }
+  // fields
+  .champs_score,
+  .email,
+  .activity div,
+  .extra {
+    display: table-cell;
+    vertical-align: top;
+    padding: 10px;
+  }
+  .email {
+    min-width: 250px;
+  }
+  .groups,
+  .contactID {
+    display: none;
+  }
+  .activity {
+    padding-right: 5px;
+  }
+  .activity > div {
+    width: 18%;
+    display: inline-block;
+    text-align: center;
+  }
+  .activity .clicks { width: 15%; }
+  .activity .forwards { width: 24%; }
+}
+.contact:first-of-type {
+  label {
+    display: block;
+    border-bottom: solid 2px black;
+    margin-bottom: 10px;
+  }
+  .activity .value {
+    display: block;
+    position: relative;
+    top: 30px;
+  }
+  .activity label {
+    position: relative;
+    top: -16px;
+  }
+}
+.contact:nth-of-type(n+2) {
+  label {
+    display: none;
+  }
+}

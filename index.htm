@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title>Champions</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <link href="libraries/ui-lightness/jquery-ui-1.10.4.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/app.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/app-print.css" rel="stylesheet" type="text/css" media="print" />
+    <link href="libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png"/>
+  </head>
+  
+  <body>
+    
+    <div class="signup">
+      <i class="fa fa-trophy"> </i>
+      <h1>Champs</h1>
+      <p>
+        Champs helps you connect deeper with your audience.<br />
+        Find out who your champions are. They are hungry for more.<br />
+        Give them what they want.
+      </p>
+      <form class="signup_form">
+        <label for="api_key_input">Connect with the emfluence Marketing Platform</label>
+        <input id="api_key_input" type="text" placeholder="Enter your API key" size="33" />
+        <input type="submit" value="Get started" />
+        <div class="messaging"> </div>
+      </form>
+    </div>
+    
+    <div class="active_app">
+    
+    </div>
+    
+    
+    
+    <div class="templates">
+      
+      <div class="active_app_template">
+        <div class="controls">
+          <div class="api_key">
+              API Key ending in <div class="value"> </div>
+          </div>
+          <div class="api_queue_status">
+            <i class="fa fa-spinner fa-spin progress-indicator"> </i> <div class="value"> </div> Pending API interactions
+          </div>
+          <div class="email_count">
+            <div class="value"> </div> Emails,
+          </div>
+          <div class="contact_count">
+            <div class="value"> </div> Contacts,
+          </div>
+          <div class="event_count">
+            <div class="value"> </div> Events
+          </div>
+          <div class="settings menu">
+            <div class="control">
+              <i class="fa fa-cog" title="Settings"> </i>
+            </div>
+            <div class="wrapper">
+              <div class="inner">
+                <section>
+                  <h4>Rank based on metric weightings:</h4>
+                  <div class="metric_values"> </div>
+                </section>
+                <section>
+                  <h4>Months of recent emails to analyze:</h4>
+                  <div class="month_limit">Unlimited</div>
+                </section>
+                <section>
+                  <h4>Groups included:</h4>
+                  <div class="groups_filter">All</div>
+                </section>
+                <section>
+                  <h4>Excluded email domain:</h4>
+                  <div class="exclude_domain">@<input type="text" size="30" placeholder="example.com" /></div>
+                </section>
+                <section>
+                  <h4>These many people are your champs:</h4>
+                  <div class="result_count">Lesser of 10% or <input type="text" value="50" placeholder="50" size="3" maxlength="3"></div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="snapshot menu">
+            <div class="control">
+              <i class="fa fa-camera" title="Snapshot these contacts"> </i>
+            </div>
+            <div class="wrapper">
+              <div class="inner">
+                <i class="fa fa-users create_group" title="Save to new platform group"> </i>
+                <i class="fa fa-print print" title="Print contact sheet"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="logout">
+            Switch Account
+          </div>
+        </div>
+        <section class="for_the_win">
+          <h1>For The Win <i class="fa fa-trophy"> </i></h1>
+          <p>
+            Here are your champions!<br />
+            They open the most emails, click on the most links.<br />
+            They're hungry. Feed them.
+          </p>
+        </section>
+        <div class="engaged_messaging"> </div>
+        <div class="engaged_contacts"> </div>
+        
+        <br style="clear: both" />
+      </div>
+    
+      <div class="contact_template">
+        <div class="contact">
+          <div class="header">
+            <div class="champs_score">
+              <label>Score</label> <div class="value"> </div>
+            </div>
+            <div class="email">
+              <label>Email</label> <div class="value"> </div>
+            </div>
+          </div>
+          <div class="contactID">
+            <label>Contact ID</label> <div class="value"> </div>
+          </div>
+          <div class="activity"> </div>
+          <div class="name extra">
+            <label>Name:</label> <div class="value"> </div>
+          </div>
+          <div class="dateAdded extra">
+            <label>Added:</label> <div class="value"> </div>
+          </div>
+          <div class="phone extra">
+            <label>Phone:</label> <div class="value"> </div>
+          </div>
+          <div class="variable-fields extra">
+            
+          </div>
+          <div class="groups extra">
+            <label>Groups:</label> <div class="value"> </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <script src="libraries/jquery.min.js"></script>
+    <script src="libraries/jquery-ui-1.10.4.min.js"></script>
+    <script src="libraries/underscore.min.js"></script>
+    
+    <script src="js/emailer_api.js"></script>
+    <script src="js/signup_manager.js"></script>
+    <script src="js/metric_control.js"></script>
+    <script src="js/active_app_manager.js"></script>
+    <script src="js/emailer_contact.js"></script>
+    <script src="js/app.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+body { cursor: default; background: #e4e5e6; margin: 0; }
+@media (min-width: 1020px) { body { padding: 2.5em 0; } }
+
+* { font-family: 'Open Sans', sans-serif; }
+
+body > .signup, body > .active_app { display: none; }
+
+.signup { text-align: center; position: relative; color: #4c466e; padding: 0 10px; min-width: 500px; }
+.signup .fa-trophy { font-size: 140px; line-height: 140px; margin: 0; padding: 0; }
+.signup h1 { margin: 0; padding: 0; position: absolute; width: 300px; left: 50%; margin-left: -150px; top: 130px; line-height: 16px; font-size: 16px; text-transform: uppercase; }
+.signup p { max-width: 500px; margin: 20px auto; }
+.signup form { padding: 20px 20px 0px; max-width: 500px; margin: 0 auto; background: #333; border-radius: 8px; color: white; }
+.signup label { padding-bottom: 5px; display: block; }
+.signup input[type="text"] { border: solid 1px white; color: white; background: rgba(255, 255, 255, 0.11); padding: 5px; font-size: 16px; transition: all 0.5s; }
+.signup form:hover input[type="text"] { background: transparent; }
+.signup input[type="submit"] { border: solid 1px white; background: white; font-size: 16px; padding: 5px; cursor: pointer; transition: all 0.3s; }
+.signup input[type="submit"]:hover { border: solid 1px #ccc; background: #ccc; }
+.signup .messaging { padding: 10px; }
+
+.controls { top: 0; left: 0; right: 0; background: #53727c; color: white; padding-left: 20px; }
+@media (min-width: 1020px) { .controls { position: fixed; } }
+.controls div { display: inline-block; }
+.controls .api_key, .controls .api_queue_status, .controls .logout, .controls .menu .control { padding: 10px; }
+.controls .api_key, .controls .api_queue_status { font-weight: 300; }
+.controls .api_control { cursor: pointer; }
+.controls .logout { background-color: black; color: white; cursor: pointer; right: 0; }
+@media (min-width: 1020px) { .controls .logout { position: fixed; } }
+.controls .menu { margin-left: 10px; }
+.controls .menu i { cursor: pointer; }
+.controls .menu .wrapper { display: block; overflow: hidden; position: absolute; background: white; color: black; max-height: 0px; transition: max-height 0.3s; }
+.controls .menu:hover .control { background: #b4cad1; color: black; }
+.controls .menu:hover .wrapper { max-height: 1000px; }
+.controls .settings .wrapper { left: 0; right: 0; background: lightblue; }
+.controls .settings input[type="text"] { border: solid 1px #666; background-color: transparent; padding: 5px; font-size: 16px; }
+.controls .settings ::-webkit-input-placeholder { color: #666; }
+.controls .settings select { border: solid 1px #666; background: transparent; }
+.controls .settings .wrapper > .inner { padding: 0 30px 30px; border-bottom: solid 4px #53727c; }
+.controls .settings section { display: inline-block; width: 47%; }
+.controls .settings section > div, .controls .settings section > h4 { padding-right: 30px; }
+.controls .settings h4 { margin-bottom: 0.4em; font-weight: normal; }
+.controls .settings .metric_control { margin-right: 10px; }
+.controls .settings .metric_control label { margin-right: 5px; }
+.controls .snapshot { margin-left: 0; }
+.controls .snapshot .wrapper i { display: block; padding: 15px 10px; }
+.controls .snapshot .wrapper i:hover { background: #ddd; }
+
+.for_the_win { background: lightblue; }
+.for_the_win h1, .for_the_win p { display: inline-block; }
+.for_the_win h1 { margin: 10px 0px 10px 25px; text-transform: uppercase; font-size: 60px; }
+.for_the_win p { font-size: smaller; margin-left: 25px; }
+
+.engaged_contacts { padding: 20px; -webkit-column-width: 325px; -webkit-column-break-inside: avoid; }
+
+.contact { display: inline-block; float: left; border-radius: 8px; margin: 5px; cursor: pointer; font-size: 0; background: white; }
+@media (max-width: 400px) { .contact { width: 90%; } }
+@media (min-width: 400px) { .contact { max-width: 350px; min-width: 320px; } }
+.contact div { font-size: initial; }
+.contact label { display: none; cursor: pointer; }
+.contact .value { display: inline-block; }
+.contact .header { background: lightblue; border-radius: 8px; overflow: hidden; }
+.contact .champs_score { display: inline-block; padding: 10px; background: #333; color: white; border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
+.contact .email { display: inline-block; padding: 10px; }
+.contact .email .value { max-width: 250px; white-space: nowrap; }
+.contact .contactID, .contact .activity, .contact .extra, .contact .get_profile { display: none; }
+
+.contact:nth-child(-n+10) .header { background: #ff5e5e; }
+
+.contact:nth-child(n+11) .header { background: #ffbc74; }
+
+.contact:nth-child(n+31) .header { background: #ebd78a; }
+
+.contact:hover { box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75); }
+
+.contact.active { -webkit-column-break-inside: avoid; }
+.contact.active .header { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.contact.active .champs_score { border-bottom-left-radius: 0; }
+.contact.active .activity, .contact.active .get_profile { display: block; padding: 10px; }
+.contact.active .activity label { display: inline-block; }
+.contact.active .get_profile { background: gray; color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
+.contact.active .get_profile:hover { background: lightgrey; color: black; }
+
+.contact.active.expanded_profile .extra { display: block; padding: 0px 10px; }
+.contact.active.expanded_profile .extra label { display: inline-block; }
+.contact.active.expanded_profile .extra:last-child { padding-bottom: 10px; }
+.contact.active.expanded_profile .get_profile { display: none; }
+.contact.active.expanded_profile .groups label, .contact.active.expanded_profile .groups .value { display: inline; }
+.contact.active.expanded_profile .groups .value div { display: inline-block; background: #53727c; color: white; margin: 2px; padding: 3px 6px; font-size: smaller; }
+
+.templates { display: none; }
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,345 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+body {
+  //font-family: 'Open Sans', sans-serif;
+  @media (min-width: 1020px) {
+    padding: 2.5em 0;
+  }
+  cursor: default;
+  background: rgb(228, 229, 230);
+  margin: 0;
+}
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body > .signup,
+body > .active_app {
+  display: none;
+}
+
+.signup {
+  text-align: center;
+  position: relative;
+  color: rgb(76, 70, 110);
+  padding: 0 10px;
+  min-width: 500px;
+  .fa-trophy {
+    font-size: 140px;
+    line-height: 140px;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    top: 130px;
+    line-height: 16px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  p {
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  form {
+    padding: 20px 20px 0px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #333;
+    border-radius: 8px;
+    color: white;
+  }
+  label {
+    padding-bottom: 5px;
+    display: block;
+  }
+  input[type="text"] {
+    border: solid 1px white;
+    color: white;
+    background: rgba(255, 255, 255, 0.11);
+    padding: 5px;
+    font-size: 16px;
+    transition: all 0.5s;
+  }
+  form:hover input[type="text"] {
+    background: transparent;
+  }
+  input[type="submit"] {
+    border: solid 1px white;
+    background: white;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  input[type="submit"]:hover {
+    border: solid 1px #ccc;
+    background: #ccc;
+  }
+  .messaging {
+    padding: 10px;
+  }
+}
+
+.controls {
+  @media (min-width: 1020px) {
+    position: fixed;
+  }
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(83, 114, 124);
+  color: white;
+  padding-left: 20px;
+  div { display: inline-block; }
+  .api_key,
+  .api_queue_status,
+  .logout,
+  .menu .control {
+    padding: 10px;
+  }
+  .api_key,
+  .api_queue_status {
+    font-weight: 300;
+  }
+  .api_control {
+    cursor: pointer;
+  }
+  .logout {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    @media (min-width: 1020px) {
+      position: fixed; 
+    }
+    right: 0;
+  }
+  // Dropdown menus
+  .menu {
+    margin-left: 10px;
+    i { cursor: pointer; }
+    .wrapper {
+      display: block;
+      overflow: hidden;
+      position: absolute;
+      background: white;
+      color: black;
+      max-height: 0px;
+      transition: max-height 0.3s;
+    }
+  }
+  .menu:hover {
+    .control {
+      background: rgb(180, 202, 209);
+      color: black;
+    }
+    .wrapper {
+      max-height: 1000px;
+    }
+  }
+  // Settings dropdown
+  .settings {
+    .wrapper {
+      left: 0;
+      right: 0;
+      background: lightblue;
+    }
+    input[type="text"] {
+      border: solid 1px #666;
+      background-color: transparent;
+      padding: 5px;
+      font-size: 16px;
+      //font-family: 'Open Sans', sans-serif;
+    }
+    ::-webkit-input-placeholder {
+      color: #666;
+    }
+    select {
+      border: solid 1px #666;
+      background: transparent;
+    }
+    .wrapper > .inner {
+      padding: 0 30px 30px;
+      border-bottom: solid 4px rgb(83, 114, 124);
+    }
+    section {
+      display: inline-block;
+      width: 47%;
+    }
+    section > div,
+    section > h4 {
+      padding-right: 30px;
+    }
+    h4 {
+      margin-bottom: 0.4em;
+      font-weight: normal;
+    }
+    .metric_control {
+      margin-right: 10px;
+      label { margin-right: 5px; }
+    }
+  }
+  // Snapshot dropdown
+  .snapshot {
+    margin-left: 0;
+    .wrapper {
+      //background: lightblue;
+      i { 
+        display: block; 
+        padding: 15px 10px;
+      }
+      i:hover {
+        background: #ddd;
+      }
+    }
+  }
+}
+
+.for_the_win {
+  background: lightblue;
+  h1, p {
+    display: inline-block;
+  }
+  h1 { 
+    margin: 10px 0px 10px 25px;
+    text-transform: uppercase;
+    font-size: 60px;
+  }
+  p {
+    font-size: smaller;
+    margin-left: 25px;
+  }
+}
+
+.engaged_contacts {
+  padding: 20px;
+  -webkit-column-width: 325px;
+  -webkit-column-break-inside: avoid;
+  //-moz-column-width: 325px;
+  //column-width: 325px;
+}
+
+.contact {
+  display: inline-block;
+  float: left;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 0;
+  background: white;
+  @media (max-width: 400px) {
+    width: 90%;
+  }
+  @media (min-width: 400px) {
+    max-width: 350px;
+    min-width: 320px;
+  }
+  div { font-size: initial; }
+  label { display: none; cursor: pointer; }
+  .value { display: inline-block; }
+  .header {
+    background: lightblue;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .champs_score {
+    display: inline-block;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .email {
+    display: inline-block;
+    padding: 10px;
+    .value {
+      max-width: 250px;
+      white-space: nowrap;
+    }
+  }
+  .contactID,
+  .activity,
+  .extra,
+  .get_profile {
+    display: none;
+  }
+}
+.contact:nth-child(-n+10) {
+  // first 10
+  .header { background: rgb(255, 94, 94); }
+}
+.contact:nth-child(n+11) {
+  // 11+
+  .header { background: rgb(255, 188, 116); }
+}
+.contact:nth-child(n+31) {
+  // 31+
+  .header { background: rgb(235, 215, 138); }
+}
+.contact:nth-child(n+51) {
+  // 51+
+}
+.contact:hover {
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+}
+.contact.active {
+  -webkit-column-break-inside: avoid;
+  .header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .champs_score {
+    border-bottom-left-radius: 0;
+  }
+  .activity,
+  .get_profile {
+    display: block;
+    padding: 10px;
+  }
+  .activity label {
+    display: inline-block;
+  }
+  .get_profile {
+    background: gray;
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .get_profile:hover {
+    background: lightgrey;
+    color: black;
+  }
+}
+.contact.active.expanded_profile {
+  .extra {
+    display: block;
+    padding: 0px 10px;
+    label { display: inline-block; }
+  }
+  .extra:last-child {
+    padding-bottom: 10px;
+  }
+  .get_profile {
+    display: none;
+  }
+  .groups {
+    label, .value { 
+      display: inline; 
+    }
+    .value div { 
+      display: inline-block;
+      background: #53727c;
+      color: white;
+      margin: 2px;
+      padding: 3px 6px;
+      font-size: smaller;
+    }
+  }
+}
+
+.templates { display: none; }
