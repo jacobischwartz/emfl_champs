@@ -76,11 +76,11 @@ function emfl_enqueue_api( action, params, success_callback, complete_callback, 
  * Should only be used from enqueue_api() or api_callback_complete()
  */
 function emfl_call_api( action, params, success_callback, complete_callback, nocache ) {
-  var url = 'https://api.emailer.emfluence.com/v0/' + action;
+  var url = 'https://api.emailer.emfluence.com/v1/' + action;
   
   // If using a PHP proxy, you might do something like:
   //var url = '/proxy.php';
-  //params.url = 'https://api.emailer.emfluence.com/v0/' + action;
+  //params.url = 'https://api.emailer.emfluence.com/v1/' + action;
   
   if(!params.apiKey) params.apiKey = localStorage[ emfl_storage_names.apiKey ];
   url += '?accessToken=' + params.apiKey; // API Key in URL because of a bug in the platform that was blocking non-URL api key requests
